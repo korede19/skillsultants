@@ -1,0 +1,33 @@
+.contactPage {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.contactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 968px) {
+  .contactPage {
+    padding-top: 70px;
+  }
+
+  .contactContainer {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+}

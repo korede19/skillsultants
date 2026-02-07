@@ -1,0 +1,10 @@
+.aboutPage {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .aboutPage {
+    padding-top: 70px;
+  }
+}

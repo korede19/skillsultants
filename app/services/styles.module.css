@@ -1,0 +1,10 @@
+.servicesPage {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .servicesPage {
+    padding-top: 70px;
+  }
+}

@@ -1,0 +1,240 @@
+.contactInfo {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.description {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: var(--color-white);
+  border-radius: 16px;
+  border: 2px solid rgba(31, 98, 142, 0.1);
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  border-color: var(--color-orange);
+  transform: translateX(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.iconCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 98, 142, 0.1) 0%,
+    rgba(31, 98, 142, 0.05) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover .iconCircle {
+  background: linear-gradient(135deg, var(--color-orange) 0%, #e67a08 100%);
+  color: var(--color-white);
+}
+
+.infoContent {
+  flex: 1;
+}
+
+.infoLabel {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.infoValue {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+a.infoValue:hover {
+  color: var(--color-orange);
+}
+
+.socialSection {
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 98, 142, 0.05) 0%,
+    rgba(246, 135, 18, 0.05) 100%
+  );
+  border-radius: 16px;
+  border: 1px solid rgba(31, 98, 142, 0.1);
+}
+
+.socialTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid rgba(31, 98, 142, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blue);
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(31, 98, 142, 0.3);
+}
+
+@media (max-width: 968px) {
+  .description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .infoCards {
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .infoCard {
+    padding: 1.5rem;
+  }
+
+  .iconCircle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .infoValue {
+    font-size: 1.05rem;
+  }
+
+  .socialSection {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    margin-bottom: 0.75rem;
+  }
+
+  .description {
+    font-size: 0.975rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .infoCards {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .infoCard {
+    padding: 1.25rem;
+  }
+
+  .infoCard:hover {
+    transform: translateY(-4px);
+  }
+
+  .iconCircle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .iconCircle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .infoLabel {
+    font-size: 0.8rem;
+  }
+
+  .infoValue {
+    font-size: 1rem;
+  }
+
+  .socialSection {
+    padding: 1.5rem;
+  }
+
+  .socialTitle {
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .socialLinks a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .socialLinks a svg {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,10 @@
+.blogPage {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .blogPage {
+    padding-top: 70px;
+  }
+}
