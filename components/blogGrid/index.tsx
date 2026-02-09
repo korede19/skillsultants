@@ -9,8 +9,8 @@ interface BlogGridProps {
   categories: string[];
 }
 
-export default function BlogGrid({ posts, categories }: BlogGridProps) {
-  const [selectedCategory, setSelectedCategory] = useState("All Posts");
+export default function BlogGrid({ posts }: BlogGridProps) {
+  const [selectedCategory] = useState("All Posts");
 
   const filteredPosts =
     selectedCategory === "All Posts"
@@ -20,22 +20,6 @@ export default function BlogGrid({ posts, categories }: BlogGridProps) {
   return (
     <section className={styles.blogGrid}>
       <div className={styles.container}>
-        <div className={styles.filterSection}>
-          <div className={styles.categories}>
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`${styles.categoryButton} ${
-                  selectedCategory === category ? styles.active : ""
-                }`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-
         <div className={styles.grid}>
           {filteredPosts.map((post, index) => (
             <article

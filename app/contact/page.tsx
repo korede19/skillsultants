@@ -2,7 +2,6 @@ import ContactHero from "@/components/contactHero";
 import styles from "./styles.module.css";
 import ContactInfo from "@/components/contactInfo";
 import ContactForm from "@/components/contactForm";
-import ContactMap from "@/components/contactMap";
 
 export default function ContactPage() {
   return (
@@ -22,8 +21,6 @@ export default function ContactPage() {
 
         <ContactForm />
       </div>
-
-      <ContactMap />
     </div>
   );
 }

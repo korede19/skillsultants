@@ -2,7 +2,6 @@ import { blogPosts, blogCategories } from "@/utils/blogData";
 import styles from "./styles.module.css";
 import BlogHero from "@/components/blogHero";
 import BlogGrid from "@/components/blogGrid";
-import BlogNewsletter from "@/components/blogNewsletter";
 
 export default function BlogPage() {
   return (
@@ -14,12 +13,6 @@ export default function BlogPage() {
       />
 
       <BlogGrid posts={blogPosts} categories={blogCategories} />
-
-      <BlogNewsletter
-        title="Stay Updated"
-        description="Subscribe to receive the latest insights, articles, and coaching tips delivered directly to your inbox."
-        ctaText="Subscribe Now"
-      />
     </div>
   );
 }

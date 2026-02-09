@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import styles from "./styles.module.css";
 
@@ -28,8 +28,7 @@ export default function FeaturedTestimonial({
   testimonials = [
     {
       id: 1,
-      quote:
-        "I am writing to recommend Oluwatoyin (Toyin) Ademola as a coach in leadership for your organization's staff. I have known Toyin for the past five months and I can testify about her services. Hired as a coach for leadership coaching by The Hunger Project, she helped me perceive leadership role in a different way. I can attest that I have improved my role and my employer values me more as a leader than before.",
+      quote: `I am writing to recommend Oluwatoyin (Toyin) Ademola as a coach in leadership for your organization’s staff. I have known Toyin for the past five months and I can testify about her services. Hired as a coach for leadership coaching by The Hunger Project, she helped me perceive leadership role in a different way. I can attest that I have improved my role and my employer (The Hunger Project) values me more as a leader than before. I have no doubts that Toyin’s services would be of valuable to your team in your organization.`,
       name: "Henry Chungu",
       title: "Project Lead",
       company: "The Hunger Project Malawi",
@@ -47,7 +46,7 @@ export default function FeaturedTestimonial({
     {
       id: 3,
       quote:
-        "This amazing technique that Toyin shares with us are absolutely necessary for the Future Way of Work. When we have anyone chatting with us we need to focus on how we communicate and what we communicate but also the specificity of why we are communicating. This is the perfect communication strategy and everyone should learn this as a skill!",
+        "This amazing technique that Toyin shares with us are absolutely necessary for the Future Way of Work. When we have anyone chatting with us we need to focus on how we communicate and what we communicate but also the specificity of why we are communicating. This is the perfect communication strategy and everyone should learn this as a skill and use it in the workplace today!",
       name: "Kevin Britz",
       title: "Communication Strategist",
       company: "Future of Work Institute",
@@ -70,13 +69,13 @@ export default function FeaturedTestimonial({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (!isAnimating) {
       setIsAnimating(true);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
       setTimeout(() => setIsAnimating(false), 500);
     }
-  };
+  }, [isAnimating, testimonials.length]);
 
   const prevSlide = () => {
     if (!isAnimating) {
@@ -99,7 +98,7 @@ export default function FeaturedTestimonial({
   useEffect(() => {
     const timer = setInterval(nextSlide, autoPlayInterval);
     return () => clearInterval(timer);
-  }, [currentIndex]);
+  }, [autoPlayInterval, currentIndex, nextSlide]);
 
   const currentTestimonial = testimonials[currentIndex];
 
