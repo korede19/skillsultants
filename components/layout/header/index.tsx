@@ -29,8 +29,8 @@ export default function Header() {
             <Image
               src="/assets/logo-1.png"
               alt="CoachName Logo"
-              width={200}
-              height={200}
+              width={180}
+              height={180}
             />
           </div>
         </Link>

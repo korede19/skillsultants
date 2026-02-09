@@ -1,7 +1,7 @@
 import ServicesHero from "@/components/serviceHero";
 import styles from "./styles.module.css";
-import ServicesList from "@/components/serviceList";
 import ServicesCallToAction from "@/components/serviceAllocation";
+import ServicesListInteractive from "@/components/serviceList";
 
 export default function ServicesPage() {
   return (
@@ -12,7 +12,7 @@ export default function ServicesPage() {
         description="Comprehensive coaching and development programs designed to unlock potential and drive sustainable growth for individuals, teams, and organizations."
       />
 
-      <ServicesList
+      <ServicesListInteractive
         services={[
           {
             id: 1,
@@ -112,7 +112,7 @@ export default function ServicesPage() {
           },
           {
             id: 9,
-            title: "Stakeholder Development, Retention and Growth Strategies",
+            title: "Stakeholder Development & Growth Strategies",
             description:
               "Comprehensive strategies to develop, engage, and retain key stakeholders for long-term organizational success.",
             features: [
@@ -184,8 +184,7 @@ export default function ServicesPage() {
           },
           {
             id: 15,
-            title:
-              "Executive / Senior Management Facilitation and Programme Development",
+            title: "Executive / Senior Management Facilitation",
             description:
               "Customized facilitation and program design for executive teams and senior management development.",
             features: [

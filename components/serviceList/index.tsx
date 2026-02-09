@@ -9,92 +9,114 @@ interface Service {
   features: string[];
 }
 
-interface ServicesListProps {
+interface ServicesListInteractiveProps {
   services: Service[];
 }
 
-export default function ServicesList({ services }: ServicesListProps) {
-  const [expandedId, setExpandedId] = useState<number | null>(null);
-
-  const toggleExpand = (id: number) => {
-    setExpandedId(expandedId === id ? null : id);
-  };
+export default function ServicesListInteractive({
+  services,
+}: ServicesListInteractiveProps) {
+  const [selectedService, setSelectedService] = useState<Service | null>(
+    services[0]
+  );
 
   return (
-    <section className={styles.servicesList}>
+    <section className={styles.servicesSection}>
       <div className={styles.container}>
-        <div className={styles.grid}>
-          {services.map((service, index) => (
+        <div className={styles.servicesList}>
+          {services.map((service) => (
             <div
               key={service.id}
-              className={`${styles.serviceCard} ${
-                expandedId === service.id ? styles.expanded : ""
+              className={`${styles.serviceItem} ${
+                selectedService?.id === service.id ? styles.active : ""
               }`}
-              style={{ animationDelay: `${index * 0.05}s` }}
+              onMouseEnter={() => setSelectedService(service)}
+              onClick={() => setSelectedService(service)}
             >
-              <div
-                className={styles.cardHeader}
-                onClick={() => toggleExpand(service.id)}
+              <span className={styles.serviceNumber}>
+                {String(service.id).padStart(2, "0")}
+              </span>
+              <span className={styles.serviceTitle}>{service.title}</span>
+              <svg
+                className={styles.arrow}
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <h3 className={styles.serviceTitle}>{service.title}</h3>
-                <button
-                  className={styles.expandButton}
-                  aria-label="Expand service details"
-                >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={expandedId === service.id ? styles.rotated : ""}
-                  >
-                    <path
-                      d="M12 5V19M5 12H19"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-
-              <div
-                className={`${styles.cardContent} ${
-                  expandedId === service.id ? styles.visible : ""
-                }`}
-              >
-                <p className={styles.description}>{service.description}</p>
-
-                <div className={styles.features}>
-                  <h4 className={styles.featuresTitle}>Key Features:</h4>
-                  <ul className={styles.featuresList}>
-                    {service.features.map((feature, idx) => (
-                      <li key={idx}>
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M20 6L9 17L4 12"
-                            stroke="currentColor"
-                            strokeWidth="2.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+                <path
+                  d="M5 12H19M19 12L12 5M19 12L12 19"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
           ))}
+        </div>
+
+        <div className={styles.serviceDetail}>
+          {selectedService && (
+            <div className={styles.detailContent}>
+              <div className={styles.detailHeader}>
+                <span className={styles.detailNumber}>
+                  {String(selectedService.id).padStart(2, "0")}
+                </span>
+                <h2 className={styles.detailTitle}>{selectedService.title}</h2>
+              </div>
+
+              <p className={styles.detailDescription}>
+                {selectedService.description}
+              </p>
+
+              <div className={styles.features}>
+                <h3 className={styles.featuresTitle}>What&apos;s Included:</h3>
+                <ul className={styles.featuresList}>
+                  {selectedService.features.map((feature, index) => (
+                    <li key={index} className={styles.featureItem}>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20 6L9 17L4 12"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button className={styles.ctaButton}>
+                Learn More
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>
