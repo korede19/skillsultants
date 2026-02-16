@@ -65,10 +65,10 @@ export default function Services() {
 
         {/* CTA Button */}
         <div className={styles.ctaWrapper}>
-          <button className={styles.ctaButton}>
+          <a className={styles.ctaButton} href="/services">
             View All Services
             <span className={styles.arrow}>→</span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

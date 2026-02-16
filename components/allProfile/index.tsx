@@ -360,7 +360,9 @@ export default function AllProfile() {
               Partner with Oluwatoyin to unlock sustainable growth for your
               organization.
             </p>
-            <button className={styles.ctaButton}>Get in Touch</button>
+            <a className={styles.ctaButton} href="/contact">
+              Get in Touch
+            </a>
           </div>
         </div>
       </section>

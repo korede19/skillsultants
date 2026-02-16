@@ -575,7 +575,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 760px) {
   .heroSection,
   .introSection,
   .thinkingSection,
@@ -584,7 +584,35 @@
   .credentialsSection,
   .philosophySection,
   .ctaSection {
-    padding: var(--spacing-md) 0;
+    padding: 80px 0;
+  }
+
+  .heroDescription,
+  .introText,
+  .highlightText,
+  .thinkingText,
+  .deliversIntro,
+  .leadershipIntro,
+  .leadershipPhilosophy,
+  .impactStatement {
+    font-size: 16px;
+  }
+
+  .ctaContent > h2 {
+    font-size: 30px;
+  }
+
+  .ctaContent > p {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+
+  .dualityItem {
+    padding: 0px;
+  }
+
+  .beliefsList > li {
+    font-size: 16px;
   }
 
   .heroTitle {

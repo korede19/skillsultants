@@ -15,7 +15,7 @@ export default function ServicesCallToAction({
   title = "Ready to Transform Your Leadership Journey?",
   description = "Choose the service that fits your needs or schedule a consultation to discuss a customized approach.",
   ctaPrimaryText = "Book a Consultation",
-  ctaPrimaryLink = "/book",
+  ctaPrimaryLink = "https://cal.com/skillsultants/consultation",
   ctaSecondaryText = "Contact Us",
   ctaSecondaryLink = "/contact",
 }: ServicesCallToActionProps) {
@@ -27,7 +27,11 @@ export default function ServicesCallToAction({
           <p className={styles.description}>{description}</p>
 
           <div className={styles.buttons}>
-            <Link href={ctaPrimaryLink} className={styles.primaryButton}>
+            <Link
+              href={ctaPrimaryLink}
+              className={styles.primaryButton}
+              target="_blank"
+            >
               {ctaPrimaryText}
               <svg
                 width="20"

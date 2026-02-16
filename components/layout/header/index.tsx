@@ -21,59 +21,94 @@ export default function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
-      <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-          <div className={styles.logoIcon}>
-            <Image
-              src="/assets/logo-1.png"
-              alt="CoachName Logo"
-              width={180}
-              height={180}
-            />
-          </div>
-        </Link>
+    <>
+      <header
+        className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
+      >
+        <div className={styles.container}>
+          <Link href="/" className={styles.logo}>
+            <div className={styles.logoIcon}>
+              <Image
+                src="/assets/logo-1.png"
+                alt="CoachName Logo"
+                width={180}
+                height={180}
+              />
+            </div>
+          </Link>
 
-        <nav
-          className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ""}`}
-        >
-          <Link href="/" className={styles.navLink}>
-            Home
-          </Link>
-          <Link href="/about" className={styles.navLink}>
-            About
-          </Link>
-          <Link href="/services" className={styles.navLink}>
-            Services
-          </Link>
-          <Link href="/blog" className={styles.navLink}>
-            Blog
-          </Link>
-          <Link href="/contact" className={styles.navLink}>
-            Contact
-          </Link>
-          <Link href="/book" className={styles.ctaButton}>
-            Book a Session
-          </Link>
-        </nav>
-
-        <button
-          className={styles.mobileMenuButton}
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`${styles.hamburger} ${
-              isMobileMenuOpen ? styles.hamburgerOpen : ""
+          <nav
+            className={`${styles.nav} ${
+              isMobileMenuOpen ? styles.navOpen : ""
             }`}
           >
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
-      </div>
-    </header>
+            <Link href="/" className={styles.navLink} onClick={closeMobileMenu}>
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className={styles.navLink}
+              onClick={closeMobileMenu}
+            >
+              About
+            </Link>
+            <Link
+              href="/services"
+              className={styles.navLink}
+              onClick={closeMobileMenu}
+            >
+              Services
+            </Link>
+            <Link
+              href="/blog"
+              className={styles.navLink}
+              onClick={closeMobileMenu}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/contact"
+              className={styles.navLink}
+              onClick={closeMobileMenu}
+            >
+              Contact
+            </Link>
+            <Link
+              href="/book"
+              className={styles.ctaButton}
+              onClick={closeMobileMenu}
+            >
+              Book a Session
+            </Link>
+          </nav>
+
+          <button
+            className={styles.mobileMenuButton}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`${styles.hamburger} ${
+                isMobileMenuOpen ? styles.hamburgerOpen : ""
+              }`}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+      </header>
+
+      {/* Overlay */}
+      {isMobileMenuOpen && (
+        <div className={styles.overlay} onClick={closeMobileMenu}></div>
+      )}
+    </>
   );
 }

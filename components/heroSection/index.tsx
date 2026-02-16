@@ -23,7 +23,6 @@ export default function HeroSection({
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
-    // Use requestAnimationFrame to avoid setState warning
     const timer = requestAnimationFrame(() => {
       setIsVisible(true);
     });
@@ -80,7 +79,11 @@ export default function HeroSection({
           </div>
 
           <div className={styles.ctas}>
-            <Link href="/book" className={styles.ctaPrimary}>
+            <Link
+              href="/https://cal.com/skillsultants/consultation"
+              className={styles.ctaPrimary}
+              target="_blank"
+            >
               {ctaPrimary}
               <svg
                 width="20"

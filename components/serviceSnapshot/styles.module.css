@@ -91,10 +91,6 @@
   line-height: 1.6;
 }
 
-/* ============================================
-   CTA BUTTON
-   ============================================ */
-
 .ctaWrapper {
   display: flex;
   justify-content: center;
@@ -133,10 +129,6 @@
 .ctaButton:hover .arrow {
   transform: translateX(5px);
 }
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
 
 @media (max-width: 968px) {
   .servicesGrid {

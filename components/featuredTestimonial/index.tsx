@@ -252,7 +252,11 @@ export default function FeaturedTestimonial({
             results
           </p>
           <div className={styles.ctaButtons}>
-            <Link href="/book" className={styles.ctaPrimary}>
+            <Link
+              href="https://cal.com/skillsultants/consultation"
+              className={styles.ctaPrimary}
+              target="_blank"
+            >
               {ctaPrimary}
               <svg
                 width="20"

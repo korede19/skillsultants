@@ -81,7 +81,12 @@ export default function Footer() {
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
               <Link href="/services">Services</Link>
-              <Link href="/book">Book a Session</Link>
+              <Link
+                href="https://cal.com/skillsultants/consultation"
+                target="_blank"
+              >
+                Book a Session
+              </Link>
             </nav>
           </div>
 

@@ -12,7 +12,7 @@ export default function AboutHero({
   name = "Oluwatoyin Ademola",
   tagline = "A Professional Certified and Accredited Coach & Mentor",
   ctaText = "Book a Consultation",
-  ctaLink = "/book",
+  ctaLink = "https://cal.com/skillsultants/consultation",
 }: AboutHeroProps) {
   return (
     <section className={styles.aboutHero}>
@@ -22,7 +22,7 @@ export default function AboutHero({
         <div className={styles.textContent}>
           <h1 className={styles.name}>{name}</h1>
           <p className={styles.tagline}>{tagline}</p>
-          <Link href={ctaLink} className={styles.ctaButton}>
+          <Link href={ctaLink} className={styles.ctaButton} target="_blank">
             {ctaText}
           </Link>
         </div>
