@@ -335,7 +335,7 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  height: 550px;
+  height: auto;
 }
 
 .imagePlaceholder {
@@ -365,17 +365,11 @@
   );
 }
 
-.imagePlaceholder svg {
-  width: 120px;
-  height: 120px;
-  color: var(--color-blue);
-  opacity: 0.6;
-}
-
-.imagePlaceholder p {
-  color: var(--color-text-light);
-  font-size: 1rem;
-  font-weight: 500;
+.imagePlaceholder > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .floatingCard {

@@ -1,122 +1,75 @@
-import Link from "next/link";
+import React from "react";
 import styles from "./styles.module.css";
 
-interface Service {
-  id: number;
-  title: string;
-}
-
-interface ServicesSnapshotProps {
-  title?: string;
-  subtitle?: string;
-  services?: Service[];
-  ctaText?: string;
-  ctaLink?: string;
-}
-
-export default function ServicesSnapshot({
-  title = "Services",
-  subtitle = "Key offerings of my brand",
-  services = [
-    { id: 1, title: "Growth Coaching" },
-    { id: 2, title: "Connectional Intelligence Coaching" },
-    { id: 3, title: "Critical Skills Coaching, and Training" },
-    { id: 4, title: "CEO/Board Level Coaching" },
-    { id: 5, title: "Team Coaching and Development" },
-    { id: 6, title: "Transformational & Innovational Leadership" },
-    { id: 7, title: "Business Growth Coaching" },
-    { id: 8, title: "Navigating Transitions coaching" },
+export default function Services() {
+  const services = [
     {
-      id: 9,
-      title: "Stakeholder development, retention and growth strategies",
+      title: "Growth Coaching",
+      description:
+        "Strategic guidance to unlock sustainable growth and achievement",
     },
-  ],
-  ctaText = "View All Services",
-  ctaLink = "/services",
-}: ServicesSnapshotProps) {
+    {
+      title: "Connectional Intelligence Coaching",
+      description:
+        "Build powerful networks and meaningful professional relationships",
+    },
+    {
+      title: "Critical Skills Coaching and Training",
+      description:
+        "Develop essential competencies for modern leadership success",
+    },
+    {
+      title: "CEO/Board Level Coaching",
+      description: "Executive coaching for C-suite leaders and board members",
+    },
+    {
+      title: "Team Coaching and Development",
+      description: "Enhance team performance, collaboration, and results",
+    },
+    {
+      title: "Transformational & Innovational Leadership",
+      description: "Lead change and drive innovation in your organization",
+    },
+    {
+      title: "Business Growth Coaching",
+      description: "Scale your business with strategic insights and execution",
+    },
+    {
+      title: "Navigating Transitions Coaching",
+      description: "Successfully manage career and organizational transitions",
+    },
+    {
+      title: "Stakeholder Development, Retention and Growth Strategies",
+      description: "Build lasting relationships that drive sustainable growth",
+    },
+  ];
+
   return (
-    <section className={styles.servicesSnapshot}>
+    <section className={styles.servicesSection}>
       <div className={styles.container}>
+        {/* Header */}
         <div className={styles.header}>
-          <div className={styles.titleCard}>
-            <h2 className={styles.title}>{title}</h2>
-            <p className={styles.subtitle}>{subtitle}</p>
-          </div>
+          <h2 className={styles.title}>Services</h2>
+          <p className={styles.subtitle}>Key offerings of my brand</p>
         </div>
 
-        <div className={styles.grid}>
+        {/* Services Grid */}
+        <div className={styles.servicesGrid}>
           {services.map((service, index) => (
-            <div
-              key={service.id}
-              className={styles.serviceCard}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className={styles.cardContent}>
-                <div className={styles.iconCircle}>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 5V19M5 12H19"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <h3 className={styles.serviceTitle}>{service.title}</h3>
-              </div>
-              <div className={styles.cardHover}>
-                <span>Learn More</span>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5 12H19M19 12L12 5M19 12L12 19"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
+            <div key={index} className={styles.serviceCard}>
+              <h3 className={styles.serviceTitle}>{service.title}</h3>
+              <p className={styles.serviceDescription}>{service.description}</p>
             </div>
           ))}
         </div>
 
+        {/* CTA Button */}
         <div className={styles.ctaWrapper}>
-          <Link href={ctaLink} className={styles.ctaButton}>
-            {ctaText}
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5 12H19M19 12L12 5M19 12L12 19"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+          <button className={styles.ctaButton}>
+            View All Services
+            <span className={styles.arrow}>→</span>
+          </button>
         </div>
-      </div>
-
-      <div className={styles.backgroundPattern}>
-        <div className={styles.wave}></div>
       </div>
     </section>
   );

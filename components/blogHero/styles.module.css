@@ -1,17 +1,26 @@
 .blogHero {
   position: relative;
   padding: 5rem 0 4rem;
-  background: linear-gradient(
-    135deg,
-    rgba(31, 98, 142, 0.05) 0%,
-    rgba(246, 135, 18, 0.05) 100%
-  );
+  background: url("../../public/assets/blogBg.jpeg") center/cover no-repeat;
   border-bottom: 1px solid rgba(31, 98, 142, 0.1);
+}
+
+.blogHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.785);
+  z-index: 0;
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
   padding: 0 2rem;
   text-align: center;
   animation: fadeInUp 0.8s ease-out;
@@ -35,8 +44,8 @@
   padding: 0.625rem 1.75rem;
   background: linear-gradient(
     135deg,
-    rgba(31, 98, 142, 0.1) 0%,
-    rgba(31, 98, 142, 0.05) 100%
+    rgba(205, 223, 235, 0.835) 0%,
+    rgba(202, 222, 235, 0.819) 100%
   );
   border: 1px solid rgba(31, 98, 142, 0.2);
   font-family: "Instrument Sans", sans-serif;
@@ -58,7 +67,7 @@
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  color: var(--color-text-dark);
+  color: #ffffff;
   line-height: 1.2;
   margin-bottom: 1rem;
   letter-spacing: -1px;
@@ -66,7 +75,7 @@
 
 .subtitle {
   font-size: clamp(1.125rem, 2vw, 1.375rem);
-  color: var(--color-blue);
+  color: #ffffff;
   font-weight: 600;
   margin-bottom: 1rem;
   line-height: 1.5;
@@ -74,7 +83,7 @@
 
 .description {
   font-size: 1.125rem;
-  color: var(--color-text-light);
+  color: #ffffff;
   line-height: 1.7;
   max-width: 700px;
   margin: 0 auto;

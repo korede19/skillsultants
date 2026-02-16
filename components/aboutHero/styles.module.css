@@ -3,29 +3,24 @@
   min-height: 85vh;
   display: flex;
   align-items: center;
+  background-image: url("../../public/assets/aboutB.jpeg");
+  background-position: center;
+  background-size: cover;
   justify-content: center;
-  background: linear-gradient(135deg, #1a4d6d 0%, #1f628e 50%, #256a97 100%);
+  /* background: linear-gradient(135deg, #1a4d6d 0%, #1f628e 50%, #256a97 100%); */
   overflow: hidden;
   padding: 4rem 0 8rem;
 }
 
-.overlay {
+.aboutHero::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-      circle at 20% 50%,
-      rgba(246, 135, 18, 0.15) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(31, 98, 142, 0.3) 0%,
-      transparent 50%
-    );
-  pointer-events: none;
+  background: rgba(0, 0, 0, 0.544);
+  z-index: 0;
 }
 
 .content {

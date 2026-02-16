@@ -63,7 +63,6 @@ export default function FeaturedTestimonial({
     },
   ],
   ctaPrimary = "Book a Session",
-  ctaSecondary = "View All Testimonials",
   autoPlayInterval = 5000,
 }: FeaturedTestimonialProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -270,9 +269,6 @@ export default function FeaturedTestimonial({
                   strokeLinejoin="round"
                 />
               </svg>
-            </Link>
-            <Link href="/testimonials" className={styles.ctaSecondary}>
-              {ctaSecondary}
             </Link>
           </div>
         </div>

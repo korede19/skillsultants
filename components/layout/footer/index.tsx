@@ -85,7 +85,7 @@ export default function Footer() {
             </nav>
           </div>
 
-          <div className={styles.column}>
+          {/* <div className={styles.column}>
             <h3 className={styles.columnTitle}>Services</h3>
             <nav className={styles.linkList}>
               <Link href="/services#one-on-one">1:1 Coaching</Link>
@@ -93,13 +93,13 @@ export default function Footer() {
               <Link href="/services#corporate">Corporate Coaching</Link>
               <Link href="/blog">Blog & Resources</Link>
             </nav>
-          </div>
+          </div> */}
 
           <div className={styles.column}>
             <h3 className={styles.columnTitle}>Contact</h3>
             <div className={styles.contactInfo}>
               <a
-                href="mailto:hello@coachname.com"
+                href="mailto:toyin@skillsultants.com"
                 className={styles.contactLink}
               >
                 <svg
@@ -114,9 +114,9 @@ export default function Footer() {
                     fill="currentColor"
                   />
                 </svg>
-                hello@coachname.com
+                toyin@skillsultants.com
               </a>
-              <a href="tel:+1234567890" className={styles.contactLink}>
+              <a href="tel:+2348080990099" className={styles.contactLink}>
                 <svg
                   width="20"
                   height="20"
@@ -129,7 +129,7 @@ export default function Footer() {
                     fill="currentColor"
                   />
                 </svg>
-                +1 (234) 567-890
+                +234 (80) 8099-0099
               </a>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function Footer() {
 
         <div className={styles.bottomSection}>
           <p className={styles.copyright}>
-            © {currentYear} CoachName. All rights reserved.
+            © {currentYear} Oluwatoyin Ademola. All rights reserved.
           </p>
           <div className={styles.legalLinks}>
             <Link href="/privacy">Privacy Policy</Link>
