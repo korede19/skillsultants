@@ -213,7 +213,7 @@ export default function ServicesPage() {
         title="Ready to Transform Your Leadership Journey?"
         description="Choose the service that fits your needs or schedule a consultation to discuss a customized approach."
         ctaPrimaryText="Book a Consultation"
-        ctaPrimaryLink="/book"
+        ctaPrimaryLink="https://cal.com/skillsultants/consultation"
         ctaSecondaryText="Contact Us"
         ctaSecondaryLink="/contact"
       />

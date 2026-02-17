@@ -195,7 +195,7 @@ export default function TermsOfService() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>12. Contact Information</h2>
+          <h2 className={styles.sectionTitle}>12. Contact Us</h2>
           <p>For any questions regarding these Terms, please contact:</p>
           <ul className={styles.contactList}>
             <li>

@@ -13,7 +13,7 @@ export default function ContactInfo({
 }: ContactInfoProps) {
   return (
     <div className={styles.contactInfo}>
-      <h2 className={styles.title}>Contact Information</h2>
+      <h2 className={styles.title}>Contact Us</h2>
       <p className={styles.description}>
         Reach out directly for inquiries, consultations, or to discuss how we
         can work together.

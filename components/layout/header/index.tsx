@@ -79,9 +79,10 @@ export default function Header() {
               Contact
             </Link>
             <Link
-              href="/book"
+              href="https://cal.com/skillsultants/consultation"
               className={styles.ctaButton}
               onClick={closeMobileMenu}
+              target="_blank"
             >
               Book a Session
             </Link>

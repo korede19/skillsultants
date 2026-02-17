@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <div className={styles.contactPage}>
       <ContactHero
-        title="Get In Touch"
+        title="Get in Touch"
         subtitle="Let's start your transformation journey together"
         description="Whether you're looking for executive coaching, team development, or leadership training, I'm here to help you achieve your goals."
       />

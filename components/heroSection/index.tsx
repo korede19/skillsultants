@@ -80,7 +80,7 @@ export default function HeroSection({
 
           <div className={styles.ctas}>
             <Link
-              href="/https://cal.com/skillsultants/consultation"
+              href="https://cal.com/skillsultants/consultation"
               className={styles.ctaPrimary}
               target="_blank"
             >
