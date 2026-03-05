@@ -5,17 +5,17 @@ import ServicesSnapshot from "@/components/serviceSnapshot";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HeroSection
         subtitle="Unlock Your Full Potential"
-        title="Transform Your Life, One Session at a Time"
-        description="Professional coaching designed to help you achieve breakthrough results in your personal and professional life. Together, we'll create lasting change through personalized guidance and proven strategies."
+        title="Certified Professional Coach and Mentor"
+        description="Beyond Coaching, designing stakeholder momentum that lasts, here stakeholders clarity becomes Momentum because Growth doesn't happen without buy-in — and buy-in doesn't happen by accident."
         ctaPrimary="Book a Session"
         ctaSecondary="Explore Services"
       />
       <BriefIntro />
       <ServicesSnapshot />
       <FeaturedTestimonial />
-    </div>
+    </>
   );
 }

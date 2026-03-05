@@ -16,7 +16,7 @@ export default function Footer() {
             </p>
             <div className={styles.socialLinks}>
               <a
-                href="https://linkedin.com"
+                href="http://www.linkedin.com/in/toyinademola"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -34,7 +34,7 @@ export default function Footer() {
                   />
                 </svg>
               </a>
-              <a
+              {/* <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -52,9 +52,9 @@ export default function Footer() {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
+              </a> */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/skillsultants"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -82,7 +82,7 @@ export default function Footer() {
               <Link href="/about">About</Link>
               <Link href="/services">Services</Link>
               <Link
-                href="https://cal.com/skillsultants/consultation"
+                href="https://calendly.com/oluwatoyinademola"
                 target="_blank"
               >
                 Book a Session

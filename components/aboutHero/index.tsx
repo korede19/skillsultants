@@ -12,7 +12,7 @@ export default function AboutHero({
   name = "Oluwatoyin Ademola",
   tagline = "A Professional Certified and Accredited Coach & Mentor",
   ctaText = "Book a Consultation",
-  ctaLink = "https://cal.com/skillsultants/consultation",
+  ctaLink = "https://calendly.com/oluwatoyinademola",
 }: AboutHeroProps) {
   return (
     <section className={styles.aboutHero}>

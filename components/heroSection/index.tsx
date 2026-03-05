@@ -60,27 +60,26 @@ export default function HeroSection({
           <h2 className={styles.title}>{title}</h2>
 
           <p className={styles.description}>{description}</p>
-
           <div className={styles.stats}>
             <div className={styles.stat}>
-              <div className={styles.statNumber}>500+</div>
+              <div className={styles.statNumber}>5000+</div>
               <div className={styles.statLabel}>Clients Coached</div>
             </div>
             <div className={styles.statDivider}></div>
             <div className={styles.stat}>
-              <div className={styles.statNumber}>10+</div>
+              <div className={styles.statNumber}>25+</div>
               <div className={styles.statLabel}>Years Experience</div>
             </div>
             <div className={styles.statDivider}></div>
             <div className={styles.stat}>
-              <div className={styles.statNumber}>95%</div>
+              <div className={styles.statNumber}>100%</div>
               <div className={styles.statLabel}>Success Rate</div>
             </div>
           </div>
 
           <div className={styles.ctas}>
             <Link
-              href="https://cal.com/skillsultants/consultation"
+              href="https://calendly.com/oluwatoyinademola"
               className={styles.ctaPrimary}
               target="_blank"
             >
@@ -200,7 +199,7 @@ export default function HeroSection({
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Proven Results</div>
                 <div className={styles.cardText}>
-                  Transforming lives since 2014
+                  Driving stakeholder growth since 2017
                 </div>
               </div>
             </div>

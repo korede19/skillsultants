@@ -111,7 +111,7 @@ export default function ContactInfo({
         <h3 className={styles.socialTitle}>Connect With Me</h3>
         <div className={styles.socialLinks}>
           <a
-            href="https://linkedin.com"
+            href="http://www.linkedin.com/in/toyinademola"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -129,7 +129,7 @@ export default function ContactInfo({
               />
             </svg>
           </a>
-          <a
+          {/* <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -147,9 +147,9 @@ export default function ContactInfo({
                 fill="currentColor"
               />
             </svg>
-          </a>
+          </a> */}
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/skillsultants"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"

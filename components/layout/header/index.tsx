@@ -79,7 +79,7 @@ export default function Header() {
               Contact
             </Link>
             <Link
-              href="https://cal.com/skillsultants/consultation"
+              href="https://calendly.com/oluwatoyinademola"
               className={styles.ctaButton}
               onClick={closeMobileMenu}
               target="_blank"

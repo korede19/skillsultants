@@ -253,7 +253,7 @@ export default function FeaturedTestimonial({
           </p>
           <div className={styles.ctaButtons}>
             <Link
-              href="https://cal.com/skillsultants/consultation"
+              href="https://calendly.com/oluwatoyinademola"
               className={styles.ctaPrimary}
               target="_blank"
             >
