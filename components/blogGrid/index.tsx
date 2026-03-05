@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { BlogPost } from "@/utils/blogData";
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 interface BlogGridProps {
   posts: BlogPost[];
@@ -28,22 +29,12 @@ export default function BlogGrid({ posts }: BlogGridProps) {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={styles.imagePlaceholder}>
-                <div className={styles.categoryBadge}>{post.category}</div>
-                <svg
-                  width="80"
-                  height="80"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19 20H5C3.89543 20 3 19.1046 3 18V6C3 4.89543 3.89543 4 5 4H9L11 6H19C20.1046 6 21 6.89543 21 8V18C21 19.1046 20.1046 20 19 20Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <Image
+                  src={post.featuredImage || "/placeholder-image.png"}
+                  alt={post.title}
+                  fill
+                  className={styles.image}
+                />
               </div>
 
               <div className={styles.cardContent}>

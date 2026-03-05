@@ -17,9 +17,9 @@ export default function AllProfile() {
                 Strategist
               </p>
               <p className={styles.heroDescription}>
-                A strategic growth partner to leaders, teams, and organizations
-                who are serious about sustainable results — not surface-level
-                change.
+                Oluwatoyin Ademola is a strategic growth partner to leaders,
+                teams, and organizations who are serious about sustainable
+                results — not surface-level change.
               </p>
             </div>
             <div className={styles.heroImage}>
@@ -40,12 +40,14 @@ export default function AllProfile() {
         <div className={styles.container}>
           <div className={styles.introContent}>
             <p className={styles.introText}>
-              With over <strong>25 years of experience</strong> spanning
+              With over <strong>25 years of experience </strong>spanning
               strategic growth, business transformation, leadership development,
               and stakeholder engagement, Oluwatoyin works at the intersection
               of clarity, influence, and momentum. Her work helps organizations
-              move beyond tactical activity into aligned execution, measurable
-              growth, and lasting buy-in.
+              move beyond tactical activity into{" "}
+              <strong>
+                aligned execution, measurable growth, and lasting buy-in.
+              </strong>
             </p>
             <div className={styles.highlightBox}>
               <p className={styles.highlightText}>
@@ -93,15 +95,21 @@ export default function AllProfile() {
               <div className={styles.dualitiesGrid}>
                 <div className={styles.dualityItem}>
                   <span className={styles.dualityIcon}>⚡</span>
-                  <p>Strategy and intuition</p>
+                  <p>
+                    Strategy <strong>and</strong> intuition
+                  </p>
                 </div>
                 <div className={styles.dualityItem}>
                   <span className={styles.dualityIcon}>🏗️</span>
-                  <p>Structure and innovation</p>
+                  <p>
+                    Structure <strong>and</strong> innovation
+                  </p>
                 </div>
                 <div className={styles.dualityItem}>
                   <span className={styles.dualityIcon}>🤝</span>
-                  <p>People and power</p>
+                  <p>
+                    People <strong>and</strong> power
+                  </p>
                 </div>
               </div>
 
@@ -152,7 +160,7 @@ export default function AllProfile() {
 
             <div className={styles.deliverCard}>
               <div className={styles.cardNumber}>05</div>
-              <h3>Design Engagement</h3>
+              <h3>Design Stakeholder Engagement</h3>
               <p>That delivers retention and ROI</p>
             </div>
           </div>
@@ -189,9 +197,9 @@ export default function AllProfile() {
           <div className={styles.leadershipContent}>
             <div className={styles.leadershipText}>
               <p className={styles.leadershipIntro}>
-                As Chief Growth Officer of a coaching and consulting firm,
-                Oluwatoyin enables organizations to achieve transformational
-                sustainability.
+                <strong>As Chief Growth Officer</strong> of a coaching and
+                consulting firm, Oluwatoyin enables organizations to achieve{" "}
+                <strong>transformational sustainability.</strong>
               </p>
 
               <div className={styles.leadershipStrengths}>
@@ -304,7 +312,7 @@ export default function AllProfile() {
             <div className={styles.philosophyQuote}>
               <blockquote>
                 <p className={styles.quoteText}>
-                  Growth doesn&apos;t come from doing more.
+                  Oluwatoyin believes growth doesn’t come from doing more.
                   <br />
                   It comes from seeing clearly and engaging intentionally.
                 </p>
@@ -332,8 +340,11 @@ export default function AllProfile() {
 
                 <p className={styles.impactStatement}>
                   Her work empowers leaders not just to grow their organizations
-                  — but to grow people, partnerships, and purpose alongside
-                  results.
+                  —{" "}
+                  <strong>
+                    but to grow people, partnerships, and purpose alongside
+                    results.
+                  </strong>
                 </p>
               </div>
 
