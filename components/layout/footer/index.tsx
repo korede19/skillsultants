@@ -142,7 +142,8 @@ export default function Footer() {
 
         <div className={styles.bottomSection}>
           <p className={styles.copyright}>
-            © {currentYear} Oluwatoyin Ademola. All rights reserved.
+            © {currentYear} Oluwatoyin Ademola. All rights reserved. | Developed
+            by The Novelty Consultants
           </p>
           <div className={styles.legalLinks}>
             <Link href="/privacy">Privacy Policy</Link>
