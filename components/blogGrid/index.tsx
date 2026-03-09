@@ -89,14 +89,6 @@ export default function BlogGrid({ posts }: BlogGridProps) {
 
                 <p className={styles.excerpt}>{post.excerpt}</p>
 
-                <div className={styles.tags}>
-                  {post.tags.slice(0, 3).map((tag) => (
-                    <span key={tag} className={styles.tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
                 <Link href={`/blog/${post.slug}`} className={styles.readMore}>
                   Read Article
                   <svg
