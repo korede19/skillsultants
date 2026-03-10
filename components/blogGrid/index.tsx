@@ -72,7 +72,7 @@ export default function BlogGrid({ posts }: BlogGridProps) {
               </div>
 
               <div className={styles.cardContent}>
-                <div className={styles.meta}>
+                {/* <div className={styles.meta}>
                   <span className={styles.date}>
                     {new Date(post.publishedDate).toLocaleDateString("en-US", {
                       month: "long",
@@ -81,7 +81,7 @@ export default function BlogGrid({ posts }: BlogGridProps) {
                     })}
                   </span>
                   <span className={styles.readTime}>{post.readTime}</span>
-                </div>
+                </div> */}
 
                 <h2 className={styles.title}>
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>

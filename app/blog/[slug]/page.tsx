@@ -39,7 +39,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className={styles.authorAvatar}>{post.author.charAt(0)}</div>
               <div className={styles.authorInfo}>
                 <span className={styles.authorName}>{post.author}</span>
-                <div className={styles.postInfo}>
+                {/* <div className={styles.postInfo}>
                   <span>
                     {new Date(post.publishedDate).toLocaleDateString("en-US", {
                       month: "long",
@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </span>
                   <span>•</span>
                   <span>{post.readTime}</span>
-                </div>
+                </div> */}
               </div>
             </div>
 
